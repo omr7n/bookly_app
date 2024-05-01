@@ -1,0 +1,26 @@
+import 'package:bookly_app/view/spash_view.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+void main() {
+  runApp(const BooklyApp());
+}
+
+class BooklyApp extends StatelessWidget {
+  const BooklyApp({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+       
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+  home: const SplashView(),
+    );
+  }
+}
+
