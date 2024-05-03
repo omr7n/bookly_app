@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
           CustomAppBar(),
           FeaturedBooksListView(),
           SizedBox(height: 50,),
-          Text("Best Seller",style: Styles.styleSemiBold20,)
+          Text("Best Seller",style: Styles.styleSemiBold18,)
         ],
       ),
     );
