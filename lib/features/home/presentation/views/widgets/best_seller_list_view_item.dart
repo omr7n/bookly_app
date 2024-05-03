@@ -1,6 +1,7 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/presentation/views/book_rating.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -29,33 +30,37 @@ class BestSellerListViewItem extends StatelessWidget {
         const SizedBox(
           width: 30,
         ),
-         Column(crossAxisAlignment: CrossAxisAlignment.start,
-
-          children: [
-            SizedBox(width: MediaQuery.sizeOf(context).width *0.5,
-              child:  Text(
-                "Harry Potter and the Goblet of Fire",
-                style: Styles.styleBold20.copyWith(fontFamily: kBriemHand),
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
+         Expanded(
+           child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+           
+            children: [
+              SizedBox(width: MediaQuery.sizeOf(context).width *0.5,
+                child:  Text(
+                  "Harry Potter and the Goblet of Fire",
+                  style: Styles.styleBold20.copyWith(fontFamily: kBriemHand),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                ),
               ),
-            ),
-            const SizedBox(height: 3,),
-             const Text(
-              "J.K. Rowling",
-              style: Styles.styleRegular14,
-            ),
-             const SizedBox(height: 3,),
-             Row(
-               children: [
-                  Text(
-                  "19.99 €",
-                  style: Styles.styleBold20.copyWith(fontWeight: FontWeight.w900,fontFamily: "Montserrat-Bold"),
-                             ),
-               ],
-             ),
-          ],
-        )
+              const SizedBox(height: 3,),
+               const Text(
+                "J.K. Rowling",
+                style: Styles.styleRegular14,
+              ),
+               const SizedBox(height: 3,),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: [
+                    Text(
+                    "19.99 €",
+                    style: Styles.styleBold20.copyWith(fontWeight: FontWeight.w900,fontFamily: "Montserrat-Bold"),
+                               ),
+                               const BookRating(),
+                 ],
+               ),
+            ],
+                   ),
+         )
       ],
     );
   }
