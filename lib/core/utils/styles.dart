@@ -10,9 +10,9 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
   );
   static const styleBold20 = TextStyle(
-    fontFamily: kBriemHand,
+
     fontSize: 20,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.normal,
   );
 
   static const styleBold30 = TextStyle(
