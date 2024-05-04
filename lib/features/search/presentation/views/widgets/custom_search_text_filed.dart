@@ -17,7 +17,7 @@ class CustomSearchTextFiled extends StatelessWidget {
             )),
         hintText: hintText,
        // fillColor: const Color(0xFFFAFAFA),
-        filled: true,
+       // filled: true,
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),
