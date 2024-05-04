@@ -43,13 +43,13 @@ class BookDetailsViewBody extends StatelessWidget {
             child: Text(
               'Rudyard Kipling',
               style: Styles.styleSemiBold18.copyWith(
-                  color: const Color(0xFF707070), fontStyle: FontStyle.italic),
+                   fontStyle: FontStyle.italic),
             ),
           ),
           const SizedBox(
             height: 14,
           ),
-          const Center(child: BookRating()),
+          const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
         ],
       ),
     );
