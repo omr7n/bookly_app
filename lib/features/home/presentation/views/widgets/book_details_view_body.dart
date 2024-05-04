@@ -1,11 +1,13 @@
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/core/widgets/custom_button.dart';
+
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_item.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/similar_books_list_view.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
+
 
 import '../../custom_book_details_app_bar.dart';
 
@@ -27,7 +29,7 @@ class BookDetailsViewBody extends StatelessWidget {
           const CustomBookDetailSAppBar(),
           Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: width * 0.2,
+              horizontal: width * 0.22,
             ),
             child: const CustomBookItem(),
           ),
@@ -55,8 +57,25 @@ class BookDetailsViewBody extends StatelessWidget {
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
-          const SizedBox(height: 15,),
+          const SizedBox(
+            height: 15,
+          ),
           const BooksAction(),
+          const SizedBox(
+            height: 50,
+          ),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "You can also like",
+              style: Styles.styleRegular14,
+            ),
+          ),
+          const SizedBox(height: 16,),
+          const SimilarBooksListView(),
+           const SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );

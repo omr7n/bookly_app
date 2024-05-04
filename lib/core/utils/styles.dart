@@ -4,9 +4,16 @@ import 'package:flutter/material.dart';
 abstract class Styles {
   static const styleSemiBold18 = TextStyle(
     //color:  Color(0xFF064060),
-     fontFamily: "Montserrat",
-    
+    fontFamily: "Montserrat",
+
     fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+  static const styleSemiBold14 = TextStyle(
+    //color:  Color(0xFF064060),
+    fontFamily: "Montserrat",
+
+    fontSize: 14,
     fontWeight: FontWeight.w600,
   );
   static const styleBold20 = TextStyle(
@@ -23,7 +30,7 @@ abstract class Styles {
   static const styleRegular14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w700,
-     fontFamily: "Montserrat",
+    fontFamily: "Montserrat",
   );
   static const styleRegular16 = TextStyle(
     fontSize: 16,
