@@ -21,7 +21,7 @@ class FeaturedBooksListView extends StatelessWidget {
               
               separatorBuilder: (context, index) {
                 return const SizedBox(
-                  width: 8,
+                  width: 16,
                 );
               },
               scrollDirection: Axis.horizontal,
