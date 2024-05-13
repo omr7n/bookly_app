@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/data/repos/home_repo.dart';
 
@@ -11,9 +11,9 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     emit(FeaturedBooksLoading());
     var result = await homeRepo.fetchFeaturedBooks();
     result.fold((failure) {
-      return FeaturedBooksFailure(errorMessage:         failure.toString() );
+      emit(FeaturedBooksFailure(errorMessage: failure.toString())) ;
     }, (books) {
-      return FeaturedBooksSuccess(books: books);
+      emit(FeaturedBooksSuccess(books: books)) ;
     });
   }
 }
