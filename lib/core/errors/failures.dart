@@ -7,6 +7,9 @@ abstract class Failure {
 
 class ServerFailure extends Failure {
   const ServerFailure({required super.errorMessage});
+
+
+
   factory ServerFailure.fromDioException(DioException dioException) {
     switch (dioException.type) {
       case DioExceptionType.connectionTimeout:
@@ -32,11 +35,15 @@ class ServerFailure extends Failure {
         }
         return const ServerFailure(
             errorMessage: "UnExpected Error ,please try again");
-          default:
-       return const ServerFailure(
-            errorMessage: "Opps there was an error, please try later");  
+      default:
+        return const ServerFailure(
+            errorMessage: "Opps there was an error, please try later");
     }
   }
+
+
+
+  
   factory ServerFailure.fromResponse(int statusCode, dynamic response) {
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return ServerFailure(errorMessage: response["error"]["message"]);

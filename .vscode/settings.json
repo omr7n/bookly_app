@@ -10,5 +10,6 @@
   ],
   "yaml.schemas": {
     "https://json.schemastore.org/pubspec.json": "file:///d%3A/bookly_app/pubspec.yaml"
-  }
+  },
+  "cSpell.enableFiletypes": ["!dart"]
 }

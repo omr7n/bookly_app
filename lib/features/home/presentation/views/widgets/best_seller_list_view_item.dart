@@ -66,7 +66,7 @@ class BookListViewItem extends StatelessWidget {
                         "19.99 €",
                         style: Styles.styleBold20.copyWith(
                             fontWeight: FontWeight.w900,
-                            fontFamily: "Montserrat-Bold"),
+                            fontFamily: "Montserrat-Bold"), 
                       ),
                       const BookRating(),
                     ],
