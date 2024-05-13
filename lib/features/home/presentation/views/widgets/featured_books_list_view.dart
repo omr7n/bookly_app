@@ -18,7 +18,6 @@ class FeaturedBooksListView extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height * .3,
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
-              
               separatorBuilder: (context, index) {
                 return const SizedBox(
                   width: 16,
@@ -27,7 +26,10 @@ class FeaturedBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return  CustomBookItem(imageUrl:state.books[index].volumeInfo.imageLinks.thumbnail.toString(),);
+                return CustomBookImage(
+                  imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail
+                     ,
+                );
               },
             ),
           );

@@ -19,5 +19,5 @@ final class NewsetBooksSuccess extends NewsetBooksState {
     required this.books,
   });
 
-  final List<BookModel> books;
+  final List<Item> books;
 }
