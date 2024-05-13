@@ -18,7 +18,7 @@ class VolumeInfo {
 	bool? allowAnonLogging;
 	String? contentVersion;
 	PanelizationSummary? panelizationSummary;
-	ImageLinks? imageLinks;
+	ImageLinks imageLinks;
 	String? language;
 	String? previewLink;
 	String? infoLink;
@@ -39,7 +39,7 @@ class VolumeInfo {
 		this.allowAnonLogging, 
 		this.contentVersion, 
 		this.panelizationSummary, 
-		this.imageLinks, 
+		required this.imageLinks, 
 		this.language, 
 		this.previewLink, 
 		this.infoLink, 
@@ -67,9 +67,8 @@ class VolumeInfo {
 				panelizationSummary: json['panelizationSummary'] == null
 						? null
 						: PanelizationSummary.fromJson(json['panelizationSummary'] as Map<String, dynamic>),
-				imageLinks: json['imageLinks'] == null
-						? null
-						: ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+            
+				imageLinks:  ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
 				language: json['language'] as String?,
 				previewLink: json['previewLink'] as String?,
 				infoLink: json['infoLink'] as String?,
